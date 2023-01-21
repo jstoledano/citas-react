@@ -54,7 +54,7 @@ const Formulario = ({pacientes, setPacientes}) => {
         className="bg-white shadow-xl rounded-md py-10 px-5 mb-10">
 
         {error && (
-          <Error mensaje={'Todos los campos son obligatorios'}/>
+          <Error><p>{`Todos los campos SON obligatorios`}</p></Error>
         )}
 
         <div className="mb-5">
