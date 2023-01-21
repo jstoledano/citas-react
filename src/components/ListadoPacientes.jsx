@@ -7,11 +7,11 @@ const ListadoPacientes = ({pacientes}) => {
         Administra tus {''}
         <span className="text-slate-600 font-bold text-center">Pacientes y Citas</span>
       </p>
-      {pacientes.map(paciente => (
-        <Paciente 
+      {pacientes.map((paciente, idx) => <Paciente 
+          key={idx}
           paciente={paciente}
         />
-      ))}
+      )}
       
     </div>
   )
