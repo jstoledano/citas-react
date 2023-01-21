@@ -10,6 +10,12 @@ const Formulario = ({pacientes, setPacientes}) => {
   const [sintomas, setSintomas] = useState('');
   const [error, setError] = useState(false);
 
+  const generarId = () => {
+    const random = Math.random().toString(36).substr(2)
+    const fecha  = Date.now().toString()
+    return fecha + random;
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -26,7 +32,8 @@ const Formulario = ({pacientes, setPacientes}) => {
       propietario,
       mail,
       fecha,
-      sintomas
+      sintomas,
+      id: generarId()
     }
     
     // Se agrega el paciente a la lista de pacientes
