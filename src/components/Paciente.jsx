@@ -1,4 +1,4 @@
-export const Paciente = ({paciente}) => {
+export const Paciente = ({paciente, setPaciente}) => {
   const {nombre, propietario, mail, fecha, sintomas} = paciente
   return (
     <div className="m-5 bg-slate-50 shadow-lg px-5 py-10 rounded-lg">
@@ -20,8 +20,10 @@ export const Paciente = ({paciente}) => {
 
         <div className="flex justify-between mt-10">
           <button
-            className="button py-2 px-10 bg-slate-600 hover:bg-slate-800 text-slate-50 font-bold uppercase rounded-md">
+            className="button py-2 px-10 bg-slate-600 hover:bg-slate-800 text-slate-50 font-bold uppercase rounded-md"
+            onClick={() => setPaciente(paciente)}>
             Editar</button>
+
           <button
             className="button py-2 px-10 bg-red-600 hover:bg-red-800 text-slate-50 font-bold uppercase rounded-md">
             Eliminar</button>
