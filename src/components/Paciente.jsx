@@ -17,6 +17,15 @@ export const Paciente = ({paciente}) => {
         <p className="font-bold mb-3 text-slate-600 uppercase">Síntomas: {''}
         <span className="font-normal normal-case">{sintomas}</span>
         </p>
+
+        <div className="flex justify-between mt-10">
+          <button
+            className="button py-2 px-10 bg-slate-600 hover:bg-slate-800 text-slate-50 font-bold uppercase rounded-md">
+            Editar</button>
+          <button
+            className="button py-2 px-10 bg-red-600 hover:bg-red-800 text-slate-50 font-bold uppercase rounded-md">
+            Eliminar</button>
+        </div>
     </div>
   )
 }
